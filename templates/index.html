@@ -1,0 +1,17 @@
+<h1>Hello World!</h1>
+
+<p>This is my first webpage</p>
+
+<p>My name is {{first_name | upper}}</p>
+
+<p>{{stuff | title}}</p>
+
+<h3>Kullanıcılar:</h3>
+{% for tasarimci in kullanicilar %}
+    {% if tasarimci == 41 %}
+        {{tasarimci +10}} <br/>
+    {% else %}
+        {{tasarimci}} <br/>
+    {% endif %}
+{% endfor %}
+
