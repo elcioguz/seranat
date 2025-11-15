@@ -1,17 +1,21 @@
-<h1>Hello World!</h1>
+{% extends 'base.html' %}
+{% block content %}
 
-<p>This is my first webpage</p>
+    <h2>Hello World!</h2>
 
-<p>My name is {{first_name | upper}}</p>
+    <p>This is my first webpage</p>
 
-<p>{{stuff | title}}</p>
+    <p>My name is {{first_name | upper}}</p>
 
-<h3>Kullanıcılar:</h3>
-{% for tasarimci in kullanicilar %}
-    {% if tasarimci == 41 %}
-        {{tasarimci +10}} <br/>
-    {% else %}
-        {{tasarimci}} <br/>
-    {% endif %}
-{% endfor %}
+    <p>{{stuff | title}}</p>
 
+    <h3>Kullanıcılar:</h3>
+    {% for tasarimci in kullanicilar %}
+        {% if tasarimci == 41 %}
+            {{tasarimci +10}} <br/>
+        {% else %}
+            {{tasarimci}} <br/>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
